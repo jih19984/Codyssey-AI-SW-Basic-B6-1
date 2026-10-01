@@ -1,0 +1,49 @@
+-------------------------------------------------
+Q13. (UPDATE) 분담 내역 하나를 골라 정산 완료 상태로 변경하기
+-------------------------------------------------
+실행한 구문:
+  UPDATE expense_split SET is_settled = TRUE WHERE id = 6;
+
+실행 결과: UPDATE 1
+
+변경 확인 (id=6 행의 is_settled가 t로 바뀜):
+ id | expense_id | traveler_id | share_amount | is_settled 
+----+------------+-------------+--------------+------------
+  6 |          2 |           3 |     30000.00 | t
+(1 row)
+
+
+-------------------------------------------------
+Q14. (DELETE) 분담 내역 하나를 골라 삭제하기
+-------------------------------------------------
+실행한 구문:
+  DELETE FROM expense_split WHERE id = 7;
+
+실행 결과: DELETE 1
+
+삭제 확인 (id=7이 더 이상 존재하지 않음):
+ id 
+----
+(0 rows)
+
+삭제 후 전체 행 수:
+ count 
+-------
+     8
+(1 row)
+
+
+-------------------------------------------------
+Q15. (CREATE INDEX) expense.trip_id에 인덱스 생성
+적용 이유: trip_id로 WHERE/JOIN 하는 조회(Q7, Q8, Q10 등)가 잦아 조회 속도를 높이기 위함
+-------------------------------------------------
+실행한 구문:
+  CREATE INDEX idx_expense_trip_id ON expense(trip_id);
+
+생성 확인:
+                   List of relations
+ Schema |        Name         | Type  | Owner |  Table  
+--------+---------------------+-------+-------+---------
+ public | idx_expense_trip_id | index | inho  | expense
+(1 row)
+

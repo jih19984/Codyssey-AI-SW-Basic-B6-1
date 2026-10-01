@@ -35,15 +35,15 @@
 - [x] expense_split 10행 이상
 
 ### 핵심 쿼리 15개 (queries.sql)
-- [ ] 기본 조회 4개 이상 (WHERE/ORDER BY/LIMIT)
-- [ ] 조인 4개 이상 (INNER 2+, LEFT 1+)
-- [ ] 집계 3개 이상 (COUNT/SUM/AVG + GROUP BY)
-- [ ] 서브쿼리 1개 이상
-- [ ] UPDATE/DELETE 2개 이상
-- [ ] 인덱스 1개 이상 (CREATE INDEX + 이유)
+- [x] 기본 조회 4개 이상 (WHERE/ORDER BY/LIMIT) — Q1~Q4
+- [x] 조인 4개 이상 (INNER 2+, LEFT 1+) — Q5,Q6,Q8(INNER) / Q7,Q9,Q10(LEFT)
+- [x] 집계 3개 이상 (COUNT/SUM/AVG + GROUP BY) — Q9,Q10,Q11
+- [x] 서브쿼리 1개 이상 — Q12
+- [x] UPDATE/DELETE 2개 이상 — Q13,Q14
+- [x] 인덱스 1개 이상 (CREATE INDEX + 이유) — Q15
 
 ### 결과 확인
-- [ ] results/ 폴더에 쿼리별 실행 결과 캡처 또는 텍스트 정리
+- [x] results/ 폴더에 쿼리별 실행 결과 캡처 또는 텍스트 정리
 
 ### 선택
 - [ ] ERD 다이어그램
